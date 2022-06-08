@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RPV - Remote Pi Vehicle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <img src="" id="camera" alt="Camera">
+    <div id="info" class="controls">
+        <span title="Temperature">Temp: <span id="temp">--</span>&deg;C</span>
+        <span title="Carbon Dioxide">CO2: <span id="co2">--</span>PPM</span>
+        <span title="Total Volatile Organic Compounds">TVOC: <span id="tvoc">--</span>PPB</span>
+        <span>Ping: <span id="ping">--</span>ms</span>
+    </div>
+    <div id="left" class="controls">
+        <input data-id="1" class="slider" type="range" min="-100" max="100" value="0"
+            onchange="this.value = 0; input(this)" oninput="input(this)" ondblclick="straight=!straight">
+    </div>
+    <div id="centre" class="controls">
+        <button data-id="3" onclick="indicator(this)">&#x21E6;</button>
+        <button data-id="5" onclick="button(this)" oncontextmenu="hazard(); event.preventDefault()">&#x26EF;</button>
+        <button data-id="4" onclick="indicator(this)">&#x21E8;</button>
+    </div>
+    <div id="right" class="controls">
+        <input data-id="2" class="slider" type="range" min="-100" max="100" value="0"
+            onchange="this.value = 0; input(this)" oninput="input(this)" ondblclick="straight=!straight">
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
