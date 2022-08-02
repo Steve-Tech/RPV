@@ -76,3 +76,7 @@ Calculate the minimum required series resistor using (Vs-Vf)/If or using [a calc
 
 #### Notes
 The battery was also hooked up to the input of the 5v regulator, in order to power the Raspberry Pi.
+
+---
+
+This project is licensed under the terms of the MIT license.
